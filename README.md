@@ -24,7 +24,7 @@ file specifies the PCP metrics to be recorded in the PCP Archive
 
 ### View PCP Archive contents
 Both example scripts will output the name and file contents of the PCP Archive
-directory. Various PCP utilities can be used to view archives.  
+directory. Various PCP utilities can be used to view the created archives.  
 > To dump the Archive contents (timestamps, metrics and readings):   
 > $ pmdumplog archive.20250206125655/144threads
 >   
