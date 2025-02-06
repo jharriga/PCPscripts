@@ -45,12 +45,11 @@ pcp_verify $pcp_conf_file
 pcp_start $pcp_conf_file $pcp_sample_rate $pcp_archive_dir $pcp_archive_name
 
 # Loop - repeat Workload for 5 samples
-echo -n "Sample "
+echo -n "Executing workload: Sample "
 for sample_ctr in {1..5}; do
         echo -n "${sample_ctr} "
         sleep $delay
         return=$(eval "$exec_str")            # Run the Workload
-        echo $return
 done
 
 echo                             # complete the new-line
