@@ -22,20 +22,21 @@ thread_cnt=$(nproc)                       # record number of cores
 pcp_archive_name="${thread_cnt}threads"
 runlog="${pcp_archive_dir}/${pcp_archive_name}.runlog"
 ## use an array to build up cmdline with runtime args
-workload=( sysbench cpu run --time="$runtime" --threads="$NPROC" )
-
-##workload="${executable} ${options} ${runtime}"
+workload=( sysbench cpu run --time="$runtime" --threads="$thread_cnt" )
 parsing=">>$runlog 2>&1"                # specific to $workload output
 exec_str="${workload[@]} ${parsing}"
 
+echo "Command: ${workload[0]}"
 echo "Workload: ${workload[@]}"
 echo " Exec string: ${exec_str}"
 echo "Number of threads for this set of runs: ${thread_cnt}"
 
 # Verify workload is available on the system
-if [ ! -x "$executable" ]; then
-  echo "File ${executable} is not found. Exiting"
-  exit 1
+if which "${workload[0]}" > /dev/null; then
+  echo "Command '${workload[0]}' found!"
+else
+  echo "Command '${workload[0]}' not found!"
+  exit 2
 fi
 
 #----------------------------------
