@@ -26,6 +26,10 @@ directory. Various PCP utilities can be used to view the created archives.
 > To dump the Archive contents (timestamps, metrics and readings):   
 > $ pmdumplog archive.20250206125655/144threads
 >   
-> To see the timestamped readings for a specific metric set:  
+> To see the timestamped readings for a specific metric set on STDOUT:  
 > $ pmrep -p -a archive.20250206125655/144threads kernel.all
+>
+> To see the timestamped readings for a specific metric set (output=kernel.all.csv):  
+> $ pmrep -p -o csv -F kernel_all.csv -a archive.20250206142031/144threads kernel.all
+
 
