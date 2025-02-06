@@ -3,7 +3,9 @@
 # - pcp_verify($cfg_file)
 # - pcp_start($cfg_file, $sample_rate, $archive_dir, $archive_name)
 # - pcp_stop()
-#########################
+#
+# NOTE: use of these Functions require that PCP is already installed on the system 
+##################################################################################
 
 # Global VARs
 # PCP Dirs and Files
