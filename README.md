@@ -13,7 +13,7 @@ Co-Pilot archive creation into bash scripts. The functions are
 The example script includes a PCP pmlogger configuration file. The contents of that
 file specifies the PCP metrics to be recorded in the PCP Archive
 * pcp_sysbench.cfg  
-  **NOTE: both the script and configuration files are heavily commented**
+  **NOTE: both the script and configuration file are commented**
 
 ## To run the 'sysbench_example.sh' script
 > Clone the repo and 'cd' into it  
