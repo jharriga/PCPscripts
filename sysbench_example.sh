@@ -1,6 +1,7 @@
 #!/bin/bash
 # Script which runs the SYSBENCH CPU stressor and creates a PCP
 # Archive with metrics as specified in the $pcp_conf_file
+# NOTE: the number of samples runs is hard-coded to 5
 ###################################################################
 
 # Include the PCP Functions file
@@ -8,7 +9,7 @@ source $PWD/pcp_functions.sh
 
 # PCP Dirs and Files
 # NOTE: pcp_archive_name is defined in Workload while-loop
-pcp_conf_file="$PWD/pcp_conf_file.cfg"
+pcp_conf_file="$PWD/pcp_sysbench.cfg"
 pcp_archive_dir="$PWD/archive.$(date +%Y%m%d%H%M%S)"
 
 # Define Timings
