@@ -24,7 +24,7 @@ restore_gpu_freq () {
 }
 
 # Include the PCP Functions file
-source $PWD/pcpfile.sh
+source $PWD/pcp_functions.sh
 
 # PCP Dirs and Files
 # NOTE: pcp_archive_name is defined in Workload while-loop
