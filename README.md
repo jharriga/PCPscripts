@@ -22,3 +22,12 @@ file specifies the PCP metrics to be recorded in the PCP Archive
 > $ chmod 755 *.sh  
 > $ ./sysbench_example.sh  
 
+### View PCP Archive contents
+Both example scripts will output the name and file contents of the PCP Archive
+directory. Various PCP utilities can be used to view archives.  
+> To dump the Archive contents (timestamps, metrics and readings):   
+> $ pmdumplog archive.20250206125655/144threads
+>   
+> To see the timestamped readings for a specific metric set:  
+> $ pmrep -p -a archive.20250206125655/144threads kernel.all
+
