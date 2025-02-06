@@ -30,6 +30,6 @@ directory. Various PCP utilities can be used to view the created archives.
 > $ pmrep -p -a archive.20250206125655/144threads kernel.all
 >
 > To see the timestamped readings for a specific metric set (output=kernel.all.csv):  
-> $ pmrep -p -o csv -F kernel_all.csv -a archive.20250206142031/144threads kernel.all
+> $ pmrep -p -o csv -F kernel_all.csv -a archive.20250206125655/144threads kernel.all
 
 
