@@ -7,7 +7,7 @@ Co-Pilot archive creation into bash scripts. The functions are
 * pcp_stop()  
   **NOTE: the system must have PCP installed and running or these functions will fail** 
 
-## Usage example are provided:
+## Usage example:
 * sysbench_example.sh: executes the 'sysbench' CPU stressor on all cores for 5 samples, and creates PCP Archive
   
 The example script includes a PCP pmlogger configuration file. The contents of that
