@@ -8,7 +8,7 @@ Co-Pilot archive creation into bash scripts. The functions are
   **NOTE: the system must have PCP installed and running or these functions will fail** 
 
 ## Usage example:
-* sysbench_example.sh: executes the 'sysbench' CPU stressor on all cores for 5 samples, and creates PCP Archive
+* sysbench_example.sh: executes the 'sysbench' CPU stressor on all cores for 5 test runs, and creates PCP Archive
   
 The example script includes a PCP pmlogger configuration file. The contents of that
 file specifies the PCP metrics to be recorded in the PCP Archive
@@ -21,7 +21,7 @@ file specifies the PCP metrics to be recorded in the PCP Archive
 > $ ./sysbench_example.sh  
 
 ### View PCP Archive contents
-Both example scripts will output the name and file contents of the PCP Archive
+The example script will output the name and file contents of the PCP Archive
 directory. Various PCP utilities can be used to view the created archives.  
 > To dump the Archive contents (timestamps, metrics and readings):   
 > $ pmdumplog archive.20250206125655/144threads
