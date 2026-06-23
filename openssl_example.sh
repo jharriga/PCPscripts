@@ -10,7 +10,8 @@ source $PWD/pcp_functions.sh
 # PCP Dirs and Files
 # NOTE: pcp_archive_name is defined in Workload while-loop
 pcp_conf_file="$PWD/pcp_openssl.cfg"
-pcp_archive_dir="$PWD/archive.$(date +%Y%m%d%H%M%S)"
+##pcp_archive_dir="$PWD/archive.$(date +%Y%m%d%H%M%S)"
+pcp_archive_dir="$PWD/output/archive.$(date +%Y%m%d%H%M%S)"
 
 # Define Timings
 delay=15             # Fixed DELAY between INNER-LOOP runs
