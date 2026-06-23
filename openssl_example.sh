@@ -23,7 +23,7 @@ thread_cnt=4
 pcp_archive_name="${thread_cnt}threads"
 runlog="${pcp_archive_dir}/${pcp_archive_name}.runlog"
 ## use an array to build up cmdline with runtime args
-workload=( "openssl speed -evp sha256 -bytes 16384 -seconds 60 -multi ${thread_cnt}" )
+workload=( openssl speed -evp sha256 -bytes 16384 -seconds 60 -multi "${thread_cnt}" )
 parsing=">>$runlog 2>&1"                # specific to $workload output
 exec_str="${workload[@]} ${parsing}"
 
